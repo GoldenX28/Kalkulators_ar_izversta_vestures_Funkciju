@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(210, 210, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 90px;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.calculator-container {
+    flex: 1;
+    box-sizing: border-box;
+    border: 2px solid;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 20);
+}
+
+.calculator-container button {
+    min-width: 80px;
+    min-height: 60px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+    border: none;
+    cursor: pointer;
+}
+
+.calculator-container button:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+.display-row {
+    height: 130px;
+    max-height: 130px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 5px 5px 5px;
+}
+
+input.inputAnswer {
+    font-size: 2em;
+    text-align: right;
+    background-color: #222;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;  /* Ensures padding is included in width */
+    border-radius: 5px;
+    outline: none;
+    height: 50px;  /* Match button height */
+    max-width: 320px;  /* Prevent it from becoming too large */
+    min-width: 200px;  /* Set a minimum width to maintain consistency */
+}
+
+input.inputAnswer:focus {
+    border-color: #0a74da;
+}
+
+.display-row .equation {
+    visibility: hidden;
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.display-row .inputAnswer {
+    font-size: 40px;
+}
+
+.calculator-container .number {
+    background-color: rgb(100, 100, 100);
+}
+
+.history {
+    box-sizing: border-box;
+    background-color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    width: 230px;
+    max-height: 623px;
+    overflow-y: auto;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.history ul {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 540px;
+    width: 210px;
+}
+
+.history p {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+a img {
+    height: 25px;
+    width: 30px;
+    float: right;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;  /* Stack the calculator and history vertically */
+        align-items: center;
+    }
+
+    .history {
+        width: 100%;  /* Takes up full width on small screens */
+        max-height: 400px;  /* Adjust height for mobile */
+    }
+
+    .calculator-container {
+        max-width: 100%;  /* Full width on mobile */
+    }
+
+    input.inputAnswer {
+        font-size: 1.5em;  /* Make text smaller on mobile */
+        max-width: 300px;  /* Limit max width on small screens */
+        min-width: 180px;
+    }
+}
