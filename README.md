@@ -1,0 +1,1 @@
+# Kalkulators_ar_izversta_vestures_Funkciju
