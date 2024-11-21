@@ -5,6 +5,12 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+a img {
+    height :25px; 
+    width :30px; 
+    float :right; 
+ }
+ 
 
 body {
     background-color: rgb(210, 210, 210);
@@ -34,7 +40,6 @@ h1 {
     box-sizing: border-box;
     border: 2px solid;
     padding: 25px;
-    border-radius: 10px;
     background-color: rgb(20, 20, 20);
 }
 
@@ -72,12 +77,12 @@ input.inputAnswer {
     border: none;
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;  /* Ensures padding is included in width */
+    box-sizing: border-box;  
     border-radius: 5px;
-    outline: none;
-    height: 50px;  /* Match button height */
-    max-width: 320px;  /* Prevent it from becoming too large */
-    min-width: 200px;  /* Set a minimum width to maintain consistency */
+    outline: none; 
+    height: 50px;  
+    max-width: 320px;  
+    min-width: 200px;  
 }
 
 input.inputAnswer:focus {
@@ -85,71 +90,90 @@ input.inputAnswer:focus {
 }
 
 .display-row .equation {
-    visibility: hidden;
-    font-size: 22px;
-    margin-top: 40px;
+    visibility: hidden; 
+    font-size: 22px; 
+    margin-top: 40px; 
 }
 
 .display-row .inputAnswer {
-    font-size: 40px;
+   font-size: 40px; 
 }
 
 .calculator-container .number {
-    background-color: rgb(100, 100, 100);
+   background-color: rgb(100, 100, 100); 
 }
 
 .history {
-    box-sizing: border-box;
-    background-color: rgb(20, 20, 20);
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    text-align: center;
-    width: 230px;
-    max-height: 623px;
-    overflow-y: auto;
-    border-radius: 0px 20px 20px 0px;
-}
-
-.history ul {
-    list-style: none;
-    margin-top: 20px;
-    overflow-y: auto;
-    max-height: 540px;
-    width: 210px;
-}
-
-.history p {
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 15px;
-    font-size: 18px;
-}
-
-a img {
-    height: 25px;
-    width: 30px;
-    float: right;
-}
-
-/* Media Query for Mobile Responsiveness */
-@media screen and (max-width: 600px) {
-    .main {
-        flex-direction: column;  /* Stack the calculator and history vertically */
-        align-items: center;
-    }
-
-    .history {
-        width: 100%;  /* Takes up full width on small screens */
-        max-height: 400px;  /* Adjust height for mobile */
-    }
-
-    .calculator-container {
-        max-width: 100%;  /* Full width on mobile */
-    }
-
-    input.inputAnswer {
-        font-size: 1.5em;  /* Make text smaller on mobile */
-        max-width: 300px;  /* Limit max width on small screens */
-        min-width: 180px;
-    }
-}
+    box-sizing: border-box; 
+    background-color: rgb(20, 20, 20); 
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    text-align: center; 
+    width: 350px; 
+    max-height: 623px; 
+    overflow-y:auto; 
+    border-radius: 0px 20px 20px 0px; 
+    padding-bottom: 10px; 
+ }
+ 
+ .history ul {
+    list-style: none; 
+    margin-top: 20px; 
+    overflow-y: auto; 
+    max-height: 540px; 
+    width: 210px; 
+ }
+ 
+ .history p {
+    margin-top: 20px; 
+    text-align: left; 
+    margin-left: 15px; 
+    font-size: 18px; 
+ }
+ 
+ .history ul li {
+     display: flex; /* Use flexbox for aligning items in the list */
+     justify-content: space-between; /* Space between text and delete button */
+     align-items: center; /* Center vertically */
+     padding: 5px; /* Padding for spacing */
+ }
+ 
+ .deleteButton {
+     background-color: #ff4d4d;  
+     color: white;  
+     border: none; 
+     border-radius: 5px;  
+     padding: 10px 15px;  
+     font-size: 16px;  
+     cursor: pointer;  
+     transition: background-color .3s, transform .1s; 
+ }
+ 
+ .deleteButton:hover {
+     background-color: #ff1a1a;  
+ }
+ 
+ .deleteButton:active {
+     background-color: #cc0000;  
+     transform: scale(0.95);  
+ }
+ 
+ .deleteAllButton {
+     background-color: #ff4d4d; 
+     color: white; 
+     border: none; 
+     border-radius: 5px ; 
+     padding: 10px ; 
+     font-size: 18px ; 
+     cursor: pointer ; 
+     transition: background-color .3s , transform .1s ; 
+     margin-bottom :10px ; 
+ }
+ 
+ .deleteAllButton:hover {
+     background-color:#ff1a1a ; 
+ }
+ 
+ .deleteAllButton:active {
+     background-color:#cc0000 ; 
+ }

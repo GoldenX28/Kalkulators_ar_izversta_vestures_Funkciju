@@ -15,7 +15,6 @@
             <div class="display-row">
                 <a id="showHistory"><img src="https://www.seekpng.com/png/full/781-7815113_history-icon-white-png.png" alt=""></a>
                 <p class="equation" id="equation">0</p>
-                <!-- Input field for result -->
                 <input type="text" class="inputAnswer" id="inputAnswer" value="0">
             </div>
             <div class="button-row">
@@ -55,13 +54,21 @@
                 <button id="calculate">=</button>
             </div>
         </div>
+
         <div class="history">
             <p>History:</p>
-            <ul>
-            </ul>
+            <ul id="historyList"></ul>
+            <!-- Divider -->
+            <hr style="margin: 10px 0; border: 1px solid #ccc;">
+            <!-- Delete All History Button -->
+            <div style="display: flex; justify-content: center;">
+                <button id="deleteAllHistory" class="deleteAllButton">Delete All History</button> 
+            </div> 
         </div>
+
     </div>
 
     <script src="./script.js"></script>
+
 </body>
 </html>
