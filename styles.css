@@ -116,13 +116,7 @@ input.inputAnswer:focus {
     padding-bottom: 10px; 
  }
  
- .history ul {
-    list-style: none; 
-    margin-top: 20px; 
-    overflow-y: auto; 
-    max-height: 540px; 
-    width: 210px; 
- }
+
  
  .history p {
     margin-top: 20px; 
@@ -131,33 +125,58 @@ input.inputAnswer:focus {
     font-size: 18px; 
  }
  
- .history ul li {
-     display: flex; /* Use flexbox for aligning items in the list */
-     justify-content: space-between; /* Space between text and delete button */
-     align-items: center; /* Center vertically */
-     padding: 5px; /* Padding for spacing */
- }
- 
- .deleteButton {
-     background-color: #ff4d4d;  
-     color: white;  
-     border: none; 
-     border-radius: 5px;  
-     padding: 10px 15px;  
-     font-size: 16px;  
-     cursor: pointer;  
-     transition: background-color .3s, transform .1s; 
- }
- 
- .deleteButton:hover {
-     background-color: #ff1a1a;  
- }
- 
- .deleteButton:active {
-     background-color: #cc0000;  
-     transform: scale(0.95);  
- }
- 
+ .history ul {
+    list-style: none; 
+    margin-top: 20px; 
+    overflow-y: auto; 
+    max-height: 540px; 
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.history ul li {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between text and button */
+    align-items: flex-start; /* Align items at the top */
+    padding: 5px 10px; /* Padding for spacing */
+    width: 100%; /* Ensure list items span the full width */
+    box-sizing: border-box; /* Include padding in the width */
+    gap: 10px; /* Add spacing between text and button */
+}
+
+.history ul li span {
+    flex-grow: 1; /* Allow text to take up available space */
+    text-align: left; /* Align text to the left */
+    white-space: normal; /* Allow wrapping */
+    overflow-wrap: break-word; /* Break words if they're too long */
+    word-break: break-word; /* Break long words for legacy support */
+    max-width: calc(100% - 80px); /* Ensure the text doesn’t collide with the button */
+}
+
+.deleteButton {
+    background-color: #ff4d4d;  
+    color: white;  
+    border: none; 
+    border-radius: 5px;  
+    padding: 5px 10px; /* Adjust padding for a cleaner look */
+    font-size: 14px; /* Slightly smaller font size */
+    cursor: pointer;  
+    transition: background-color .3s, transform .1s; 
+    text-align: center; /* Ensure button text stays centered */
+    min-width: 60px; /* Consistent button width */
+    height: 30px; /* Ensure consistent height */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.deleteButton:hover {
+    background-color: #ff1a1a;  
+}
+
+.deleteButton:active {
+    background-color: #cc0000;  
+    transform: scale(0.95);  
+}
+
  .deleteAllButton {
      background-color: #ff4d4d; 
      color: white; 
