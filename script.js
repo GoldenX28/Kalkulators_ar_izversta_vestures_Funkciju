@@ -47,7 +47,7 @@ let operator = null;
 // Allow only numbers, decimal point, and operators in the input
 inputAnswer.addEventListener("input", function (e) {
     // Allow only valid characters
-    inputAnswer.value = inputAnswer.value.replace(/[^0-9+\-*/=]/g, "");
+    inputAnswer.value = inputAnswer.value.replace(/[^0-9+\-.*/=]/g, "");
 });
 
 // Function to handle number button clicks
